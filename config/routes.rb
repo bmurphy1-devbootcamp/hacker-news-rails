@@ -6,9 +6,11 @@ HackerNews::Application.routes.draw do
     resources :comments
   end
 
-  resources :users, only: [:create, :new, :update, :destroy]
+  resources :users, only: [:create, :new, :update]
 
   get '/login' => 'sessions#login'
+  get '/logout' => 'sessions#logout'
+  get '/signup' => 'users#new'
 
   root 'posts#index'
 
