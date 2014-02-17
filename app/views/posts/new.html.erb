@@ -1,4 +1,4 @@
-
+<% if session[:current_user_id] %>
 <h1> Create new post </h1>
 <%= form_for @post do |f| %>
 <p>
@@ -17,3 +17,7 @@
 <%end%>
 
 <%= link_to "home", root_path %>
+<% else %>
+<h1>Please Sign In</h1>
+<%= link_to "Login", login_path %>
+<% end %>
