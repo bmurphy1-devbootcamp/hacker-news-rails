@@ -6,3 +6,21 @@
 <%= link_to "edit", edit_post_path(@post)%>
 <%= link_to "home", root_path %>
 <%= link_to "delete", post_path(@post), method: :delete %>
+<br>
+<br>
+<br>
+<br>
+<p>
+<%= form_for([@post, Comment.new]) do |f| %>
+<%= f.label :content %>
+<%= f.text_area :text %>
+<%= f.submit  %>
+<% end %>
+</p>
+
+<ul>
+  <% @post.comments.each do |comment| %>
+  <li><%= comment.text %>
+    <%= link_to "delete", [comment.post, comment], method: :delete %></li>
+  <% end %>
+</ul>
