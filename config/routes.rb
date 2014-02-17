@@ -9,6 +9,7 @@ HackerNews::Application.routes.draw do
   resources :users, only: [:create, :new, :update]
 
   get '/login' => 'sessions#login'
+  post '/login' => 'sessions#create'
   get '/logout' => 'sessions#logout'
   get '/signup' => 'users#new'
 
