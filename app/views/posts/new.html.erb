@@ -1,3 +1,4 @@
+<%# prefer to check for a current user with a method like "logged_in?" or if current_user %>
 <% if session[:current_user_id] %>
 <h1> Create new post </h1>
 <%= form_for @post do |f| %>

@@ -9,7 +9,7 @@ class PostsController <ApplicationController
 
   def create
     post = Post.new(params[:post].permit(:title, :url, :text))
-    post.save
+    post.save # failure case...?
     redirect_to post
   end
 
