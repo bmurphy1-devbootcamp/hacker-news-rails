@@ -19,4 +19,4 @@ $ rails s
 ```
 
 Questions?
-Contact:
+Contact: bmurphy1, lydiakoller, jsum528
